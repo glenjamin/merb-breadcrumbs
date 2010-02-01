@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "merb-breadcumbs"
+    gem.name = "merb-breadcrumbs"
     gem.summary = %Q{A simple merb plugin to assist in breadcumbing}
     gem.description = %Q{A simple merb plugin to assist in breadcumbing}
     gem.email = "glen@epigenesys.co.uk"
