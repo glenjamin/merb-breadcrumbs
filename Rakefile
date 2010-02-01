@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{A simple merb plugin to assist in breadcumbing}
     gem.description = %Q{A simple merb plugin to assist in breadcumbing}
     gem.email = "glen@epigenesys.co.uk"
-    gem.homepage = "http://github.com/glenjamin/merb-breadcumbs"
+    gem.homepage = "http://github.com/glenjamin/merb-breadcrumbs"
     gem.authors = ["Glen Mailer"]
 
     gem.add_dependency('merb-core', '>= 1.0.12')
@@ -42,7 +42,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "merb-breadcumbs #{version}"
+  rdoc.title = "merb-breadcrumbs #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
