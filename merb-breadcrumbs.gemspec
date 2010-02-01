@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/glenjamin/merb-breadcumbs}
+  s.homepage = %q{http://github.com/glenjamin/merb-breadcrumbs}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
