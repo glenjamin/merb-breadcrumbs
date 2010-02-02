@@ -10,13 +10,6 @@ module Merb
         @breadcrumbs ||= []
       end
 
-      # Convenience method for laying a trail of breadcrumbs
-      def breadcrumb_trail(*args)
-        args.each do |arg|
-          send(:before, "#{arg}_crumb".to_sym)
-        end
-      end
-
       def push_crumb(text, link=nil)
         breadcrumbs << [text, link]
       end
@@ -31,6 +24,14 @@ module Merb
       end
 
       module ClassMethods
+
+        # Convenience method for laying a trail of breadcrumbs
+        def breadcrumb_trail(*args)
+          args.each do |arg|
+            send(:before, "#{arg}_crumb".to_sym)
+          end
+        end
+
         ACTION_CRUMBS = {
           :new     => 'New',
           :create  => 'New',
