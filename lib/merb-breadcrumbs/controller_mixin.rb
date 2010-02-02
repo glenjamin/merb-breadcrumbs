@@ -17,7 +17,7 @@ module Merb
       def action_crumb
         crumb_function = self.class.action_crumbs[action_name.to_sym]
         case crumb_function
-          when Symbol then push_crumb(self.send(crumb_function))
+          when Symbol then self.send(crumb_function)
           when String then push_crumb(crumb_function)
           when Array  then push_crumb(*crumb_function)
         end
