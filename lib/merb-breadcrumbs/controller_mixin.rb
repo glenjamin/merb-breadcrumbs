@@ -42,7 +42,7 @@ module Merb
         }
 
         def action_crumbs
-          @@action_crumbs ||= begin
+          @action_crumbs ||= begin
             super
           rescue NoMethodError
             ACTION_CRUMBS
@@ -50,7 +50,7 @@ module Merb
         end
 
         def more_action_crumbs(hash)
-          @@action_crumbs = action_crumbs.merge(hash)
+          @action_crumbs = action_crumbs.merge(hash)
         end
       end # ClassMethods
 
