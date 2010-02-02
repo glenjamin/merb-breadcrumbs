@@ -27,8 +27,14 @@ module Merb
 
         # Convenience method for laying a trail of breadcrumbs
         def breadcrumb_trail(*args)
+          options = if args.last.respond_to?(:each_pair)
+            args.pop
+          else
+            {}
+          end
+
           args.each do |arg|
-            send(:before, "#{arg}_crumb".to_sym)
+            send(:before, "#{arg}_crumb".to_sym, options)
           end
         end
 
